@@ -1,0 +1,18 @@
+# Output of the go coverage tool
+*.coverprofile
+
+# Logs and debugging
+*.log
+
+# Dependency directories (if you ever vendor)
+vendor/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-generated files
+.DS_Store
+Thumbs.db
