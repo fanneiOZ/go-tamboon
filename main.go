@@ -1,4 +1,4 @@
-package go_tamboon
+package main
 
 import (
 	"go-tamboon/internal/application/donation"
@@ -19,14 +19,14 @@ func main() {
 
 	path := os.Args[1]
 	decodedReader, err := fileio.OpenAndDecodeRot128File(path)
-	defer func() {
-		if err := decodedReader.Close(); err != nil {
-			log.Printf("Wanring: failed to close file: %s", err)
-		}
-	}()
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer func() {
+		if err := decodedReader.Close(); err != nil {
+			log.Printf("Warning: failed to close file: %s", err)
+		}
+	}()
 
 	fryPahPaUseCase := initFryPahPaUseCase()
 	summary, err := fryPahPaUseCase.Execute(decodedReader.Reader)
