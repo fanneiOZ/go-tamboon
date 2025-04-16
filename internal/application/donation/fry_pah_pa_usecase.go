@@ -26,10 +26,10 @@ var (
 
 type FryPahPaUseCase struct {
 	tonPahPa      *donation.TonPahPa
-	chargeUseCase paymentApp.ChargeCreditCard
+	chargeUseCase *paymentApp.ChargeCreditCard
 }
 
-func NewFryPahPaUseCase(chargeCreditCardUseCase paymentApp.ChargeCreditCard) *FryPahPaUseCase {
+func NewFryPahPaUseCase(chargeCreditCardUseCase *paymentApp.ChargeCreditCard) *FryPahPaUseCase {
 	return &FryPahPaUseCase{
 		tonPahPa:      donation.CreateTonPahPa(),
 		chargeUseCase: chargeCreditCardUseCase,

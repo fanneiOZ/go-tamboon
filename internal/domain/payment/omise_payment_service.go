@@ -9,10 +9,10 @@ var _ PaymentService = (*OmisePaymentService)(nil)
 
 type OmisePaymentService struct {
 	tokenApi  *v20190529.TokenAPI
-	chargeApi v20190529.ChargeAPI
+	chargeApi *v20190529.ChargeAPI
 }
 
-func NewOmisePaymentService(tokenApi *v20190529.TokenAPI, chargeApi v20190529.ChargeAPI) *OmisePaymentService {
+func NewOmisePaymentService(tokenApi *v20190529.TokenAPI, chargeApi *v20190529.ChargeAPI) *OmisePaymentService {
 	return &OmisePaymentService{tokenApi: tokenApi, chargeApi: chargeApi}
 }
 
