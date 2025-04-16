@@ -3,6 +3,11 @@
 A CLI application for processing encrypted donation records in bulk.  
 Written in Go — with care, curiosity, and a focus on clean architecture.
 
+> This is the final Go implementation of
+> the [ไปทำบุญ Challenge](https://github.com/opn-ooo/challenges/tree/master/challenge-go), thoughtfully structured and
+> built from the ground up — inspired by an earlier [Node.js prototype](https://github.com/fanneiOZ/go-tamboon-at-node)
+> used to validate the domain model and architecture.
+
 ---
 
 ## 🧠 Project Overview
