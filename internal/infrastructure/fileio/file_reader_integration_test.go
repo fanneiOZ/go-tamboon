@@ -14,7 +14,9 @@ func TestOpenAndDecodeRot128File(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		defer reader.Close()
+		defer func() {
+			_ = reader.Close()
+		}()
 
 		data, err := io.ReadAll(reader.Reader)
 		if err != nil {
