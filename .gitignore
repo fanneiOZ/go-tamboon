@@ -16,3 +16,4 @@ vendor/
 # OS-generated files
 .DS_Store
 Thumbs.db
+/go-tamboon
