@@ -120,6 +120,9 @@ maintainable architecture:
 
 ## 📌 TODO (if time allowed)
 
+- I knew I missed one requirement to display the top 3 donors name - I planned to add this thing into `TonPahPa` entity
+  and produce it along with `Summary()` method.
+
 - Better logging and error reporting
 
 - Flag-based CLI (e.g. --summary-only, --dry-run)
