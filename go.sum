@@ -1,5 +1,7 @@
 github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkpeCY=
 github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
+github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/opn-ooo/challenges v0.0.0-20240913094335-d0c3dabe14c6 h1:RsTJAF6OZGgZZmFN7vEKbJ2umqd8Gd1ZaBJnK5lfbiY=
 github.com/opn-ooo/challenges v0.0.0-20240913094335-d0c3dabe14c6/go.mod h1:Z7pcMtrFmbxjeEThoQZIz84p1E3lTJ5oA8MozfuIftg=
 github.com/shopspring/decimal v1.4.0 h1:bxl37RwXBklmTi0C79JfXCEBD1cqqHt0bbgBAGFp81k=

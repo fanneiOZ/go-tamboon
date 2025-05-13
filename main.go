@@ -1,40 +1,57 @@
 package main
 
 import (
+	"fmt"
 	"go-tamboon/internal/application/donation"
 	paymentApp "go-tamboon/internal/application/payment"
 	"go-tamboon/internal/domain/payment"
 	"go-tamboon/internal/infrastructure/external/omise"
 	v20190529 "go-tamboon/internal/infrastructure/external/omise/v20190529"
-	"go-tamboon/internal/infrastructure/fileio"
-	"go-tamboon/internal/presenter/console"
-	"log"
+	"math/rand/v2"
 	"os"
+	"time"
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		log.Fatalf("Usage: %s <path to .rot128 file>", os.Args[0])
-	}
+	//if len(os.Args) < 2 {
+	//	log.Fatalf("Usage: %s <path to .rot128 file>", os.Args[0])
+	//}
+	//
+	//path := os.Args[1]
+	//decodedReader, err := fileio.OpenAndDecodeRot128File(path)
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	//defer func() {
+	//	if err := decodedReader.Close(); err != nil {
+	//		log.Printf("Warning: failed to close file: %s", err)
+	//	}
+	//}()
+	//
+	//fryPahPaUseCase := initFryPahPaUseCase()
+	//summary, err := fryPahPaUseCase.Execute(decodedReader.Reader)
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	//
+	//console.PrintTonPahPaSummary(summary)
 
-	path := os.Args[1]
-	decodedReader, err := fileio.OpenAndDecodeRot128File(path)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer func() {
-		if err := decodedReader.Close(); err != nil {
-			log.Printf("Warning: failed to close file: %s", err)
+	go display("abc")
+	a := display("def")
+	fmt.Println(a)
+	time.Sleep(1 * time.Millisecond)
+}
+
+func display(a string) int {
+	for i := 0; i < 5; i++ {
+		fmt.Println(a)
+
+		if a == "abc" && rand.Float32() <= 0.2 {
+			panic("sample")
 		}
-	}()
-
-	fryPahPaUseCase := initFryPahPaUseCase()
-	summary, err := fryPahPaUseCase.Execute(decodedReader.Reader)
-	if err != nil {
-		log.Fatal(err)
 	}
 
-	console.PrintTonPahPaSummary(summary)
+	return 20
 }
 
 func initFryPahPaUseCase() *donation.FryPahPaUseCase {
